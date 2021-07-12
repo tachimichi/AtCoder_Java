@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class B {
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
-
+        //* 提出用のscan
+        //* ------------------------------------------------
         int a = scan.nextInt();
         int b = scan.nextInt();
         int[] num = new int[a];

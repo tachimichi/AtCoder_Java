@@ -1,11 +1,13 @@
 package ABC210.学習;
 
 import java.util.Scanner;
-
+import java.io.*;
 public class B {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-
+		File file = new File("../txt/B.txt");
+		Scanner scan = new Scanner(file);
+        //* 学習用scan
+        //* ---------------------------
         int a = scan.nextInt();
         int b = scan.nextInt();
         int[] num = new int[a];
