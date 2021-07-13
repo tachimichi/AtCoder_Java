@@ -3,8 +3,8 @@ import java.io.*;
 
 public class B {
     public static void main(String[] args) throws Exception {
-		File file = new File("../txt/B.txt");
-		Scanner scan = new Scanner(file);
+        File file = new File("../txt/B.txt");
+        Scanner scan = new Scanner(file);
         //* 学習用scan
         //* ---------------------------
         int n = scan.nextInt();
