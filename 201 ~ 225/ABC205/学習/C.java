@@ -13,6 +13,7 @@ public class C {
 
         int absA = Math.abs(a);
         int absB = Math.abs(b);
+        scan.close();
 
         //* cが偶数であれば、aやbの片方が負だろうとイコールになるため
         //* 絶対値で処理する
