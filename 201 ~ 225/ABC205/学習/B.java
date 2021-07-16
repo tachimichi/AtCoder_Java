@@ -9,7 +9,7 @@ public class B {
         // * ---------------------------
         int n = scan.nextInt();
         int[] a = new int[n];
-        long f = 1;
+        // long f = 1;
         for (int i = 0; i < a.length; i++) {
             a[i] = scan.nextInt();
             // f *= a[i];
