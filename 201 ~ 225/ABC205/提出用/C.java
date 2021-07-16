@@ -6,36 +6,30 @@ public class C {
         Scanner scan = new Scanner(System.in);
         //* 提出用のscan
         //* ------------------------------------------------
-        int n = scan.nextInt();
-        long k = scan.nextLong();
-        // System.out.println(n);
-        // System.out.println(k);
-        int[] a = new int[n];
-        int[] copy = new int[n];
-        for(int i = 0; i < n; i++) {
-            a[i] = scan.nextInt();
-            copy[i] = a[i];
-            // System.out.println(a[i]);
-            // System.out.println(copy[i]);
-        }
-        scan.close();
-        //* -------------------
-        Arrays.sort(copy);
-        // System.out.println(Arrays.toString(a));
-        // System.out.println(Arrays.toString(copy));
-        
-        long ans = k / (long)n;
-        long mod = k % (long)n;
-        // System.out.println(mod);
-        for (int i = 0; i < n; i++) {
-            if(mod == 0) {
-                System.out.println(ans);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
+
+        int absA = Math.abs(a);
+        int absB = Math.abs(b);
+
+        //* cが偶数であれば、aやbの片方が負だろうとイコールになるため
+        //* 絶対値で処理する
+        if(c % 2 == 1) {
+            if (a == b) {
+                System.out.println("=");
+            } else if (a > b) {
+                System.out.println(">");
             } else {
-                if(a[i] <= copy[(int)mod - 1]) {
-                    System.out.println(ans + 1);
-                } else {
-                    System.out.println(ans);
-                }
+                System.out.println("<");
+            }
+        } else {
+            if (absA == absB) {
+                System.out.println("=");
+            } else if (absA > absB) {
+                System.out.println(">");
+            } else {
+                System.out.println("<");
             }
         }
     }
