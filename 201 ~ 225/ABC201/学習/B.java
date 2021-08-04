@@ -8,26 +8,14 @@ public class B {
         // * 学習用scan
         // * ---------------------------
         int n = scan.nextInt();
-        int[] a = new int[n];
-        // long f = 1;
-        for (int i = 0; i < a.length; i++) {
-            a[i] = scan.nextInt();
-            // f *= a[i];
+        Map<String, Integer> map = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            String str = scan.next();
+            int num = scan.nextInt();
+            map.put(str, num);
         }
-        // System.out.println(f);
         scan.close();
+        System.out.println(map);
 
-        Arrays.sort(a);
-        int count = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] == i + 1)
-                count++;
-        }
-
-        if (count == n) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
-        }
     }
 }
