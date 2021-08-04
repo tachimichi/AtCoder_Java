@@ -11,11 +11,6 @@ public class A {
         int b = scan.nextInt();
         scan.close();
 
-        // * NG例：a:3, b:2のケース
-        if (a <= b && b <= a * 6) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
-        }
+        System.out.println(b * a / 100.0);
     }
 }
