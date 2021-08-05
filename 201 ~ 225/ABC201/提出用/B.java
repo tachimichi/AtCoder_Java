@@ -7,23 +7,25 @@ public class B {
         // * 提出用のscan
         // * ------------------------------------------------
         int n = scan.nextInt();
+        // 高さを格納する配列
         int[] a = new int[n];
-        for (int i = 0; i < a.length; i++) {
-            a[i] = scan.nextInt();
+        // map(キー、値)
+        Map<Integer, String> map = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            String str = scan.next();
+            int high = scan.nextInt();
+            a[i] = high;
+            map.put(high, str);
         }
         scan.close();
 
+        // System.out.println(map);
         Arrays.sort(a);
-        int count = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] == i + 1)
-                count++;
-        }
+        // 配列の中身を確認
+        // System.out.println(Arrays.toString(a));
+        // 配列の要素を指定
+        // System.out.println(a[a.length-2]);
 
-        if (count == n) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
-        }
+        System.out.println(map.get(a[a.length-2]));
     }
 }
