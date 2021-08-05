@@ -7,10 +7,17 @@ public class A {
         Scanner scan = new Scanner(file);
         // * 学習用scan
         // * ------------------------------------------------
-        int a = scan.nextInt();
-        int b = scan.nextInt();
+        int[] a = new int[3];
+        for(int i = 0; i < 3; i++) {
+            a[i] = scan.nextInt();
+        }
         scan.close();
+        Arrays.sort(a);
 
-        System.out.println(b * a / 100.0);
+        if(a[1] - a[0] == a[2] - a[1]) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
     }
 }
