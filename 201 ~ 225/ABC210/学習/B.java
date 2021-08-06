@@ -1,30 +1,28 @@
-import java.util.Scanner;
+import java.util.*;
 import java.io.*;
+
 public class B {
     public static void main(String[] args) throws Exception {
-		File file = new File("../txt/B.txt");
-		Scanner scan = new Scanner(file);
-        //* 学習用scan
-        //* ---------------------------
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int[] num = new int[a];
-        for (int i = 0; i < num.length; i++) {
-            num[i] = scan.nextInt();
-            // System.out.println(num[i]);
-        }
-        scan.close();
-        // System.out.println(num);
-        for (int i = 0; i < a; i++) {
-            if (i % 2 == 1) {
-                num[i]--;
+        File file = new File("../txt/B.txt");
+        Scanner scan = new Scanner(file);
+        // * 学習用scan
+        // * ---------------------------
+        int n = scan.nextInt();
+        //* String型として、標準入力
+        //* 配列もString型で格納する
+        String strNum = scan.next();
+        String a[] = strNum.split("");
+        
+        for(int i =0; i < n; i++) {
+            if(a[i].equals("1")) {
+                if(i % 2 == 0) {
+                    System.out.println("Takahashi");
+                } else {
+                    System.out.println("Aoki");
+                }
+                //* もし1を発見できた場合
+                break;
             }
-            b -= num[i];
-        }
-        if (b < 0) {
-            System.out.println("No");
-        } else {
-            System.out.println("Yes");
         }
     }
 }
