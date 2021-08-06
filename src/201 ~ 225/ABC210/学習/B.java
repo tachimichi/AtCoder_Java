@@ -1,5 +1,3 @@
-package ABC210.学習;
-
 import java.util.Scanner;
 import java.io.*;
 public class B {

@@ -1,5 +1,3 @@
-package ABC210.提出用;
-
 import java.util.Scanner;
 
 public class A {
@@ -7,13 +5,17 @@ public class A {
         Scanner scan = new Scanner(System.in);
         //* 提出用のscan
         //* ------------------------------------------------
-		int a = scan.nextInt();
-		int b = scan.nextInt();
-		scan.close();
+        int n = scan.nextInt();
+        int a = scan.nextInt();
+        int x = scan.nextInt();
+        int y = scan.nextInt();
+        scan.close();
 
-        int ans = 0;
-        for(int i = a; i <= b; i++) {
-            ans++;
+        int ans;
+        if(n > a) {
+            ans = a * x + (n - a) * y;
+        } else {
+            ans = n * x;
         }
         System.out.println(ans);
     }
