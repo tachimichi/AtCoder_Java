@@ -7,6 +7,8 @@ public class B {
         //* 提出用のscan
         //* ------------------------------------------------
         int n = scan.nextInt();
+        scan.close();
+        
         int count = 0;
         int sum = 0;
         while(sum < n) {

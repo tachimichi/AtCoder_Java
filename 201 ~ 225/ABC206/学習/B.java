@@ -8,6 +8,8 @@ public class B {
         //* 学習用scan
         //* ---------------------------
         int n = scan.nextInt();
+        scan.close();
+        
         int count = 0;
         int sum = 0;
         while(sum < n) {
