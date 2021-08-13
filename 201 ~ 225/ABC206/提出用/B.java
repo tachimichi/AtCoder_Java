@@ -1,5 +1,5 @@
 import java.util.*;
-import java.io.*;
+// import java.io.*;
 
 public class B {
     public static void main(String[] args) throws Exception {
@@ -8,7 +8,7 @@ public class B {
         //* ------------------------------------------------
         int n = scan.nextInt();
         scan.close();
-        
+
         int count = 0;
         int sum = 0;
         while(sum < n) {
