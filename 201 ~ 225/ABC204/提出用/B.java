@@ -12,18 +12,13 @@ public class B {
             a[i] = scan.nextInt();
         }
         scan.close();
-
-        Arrays.sort(a);
-        int count = 0;
+        int ans = 0;
         for (int i = 0; i < a.length; i++) {
-            if (a[i] == i + 1)
-                count++;
+            if(a[i] > 10) {
+                int x = a[i] - 10;
+                ans += x;
+            }
         }
-
-        if (count == n) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
-        }
+        System.out.println(ans);
     }
 }
