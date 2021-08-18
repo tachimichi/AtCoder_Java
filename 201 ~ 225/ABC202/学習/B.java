@@ -23,6 +23,12 @@ public class B {
             }
         }
         System.out.println(Arrays.toString(arr);
-
+        /*
+        List<Account> a = [SELECT Id, Name, (SELECT Id, FirstName FROM Contacts) FROM Account];
+        Account count = [SELECT count() FROM Acccount];
+        System.debug(count);
+        System.debug(Limits.getQueryRows());
+        System.debug(Limits.getQueries());
+        */
     }
 }
