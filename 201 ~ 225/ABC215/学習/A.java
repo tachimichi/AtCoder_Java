@@ -7,7 +7,15 @@ public class A {
         Scanner sc = new Scanner(file);
         // * 学習用sc
         // * ---------------------------
-        int n = sc.nextInt();
+        String s = sc.next();
+        String ac = "Hello,World!";
+        sc.close();
 
+        // System.out.println(ac);
+        if (s.equals(ac)) {
+            System.out.println("AC");
+        } else {
+            System.out.println("WA");
+        }
     }
 }

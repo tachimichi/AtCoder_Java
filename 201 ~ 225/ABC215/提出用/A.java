@@ -5,14 +5,15 @@ public class A {
         Scanner sc = new Scanner(System.in);
         // * 提出用のsc
         // * ------------------------------------------------
-        int n = sc.nextInt();
+        String s = sc.next();
+        String ac = "Hello,World!";
         sc.close();
-        if (n >= 212) {
-            System.out.println(8);
-        } else if (n <= 125) {
-            System.out.println(4);
+
+        // System.out.println(ac);
+        if (s.equals(ac)) {
+            System.out.println("AC");
         } else {
-            System.out.println(6);
+            System.out.println("WA");
         }
     }
 }
