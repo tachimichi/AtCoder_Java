@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class A {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-        //* 提出用のscan
-        //* ------------------------------------------------
+        Scanner sc = new Scanner(System.in);
+        // * 提出用のsc
+        // * ------------------------------------------------
         // 排他的論理和(xor)：^
         // 論理積(and)：&
         // 論理和(or)：|
         // 反転(not)：~
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        scan.close();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        sc.close();
         int xor = a ^ b;
         System.out.println(xor);
 

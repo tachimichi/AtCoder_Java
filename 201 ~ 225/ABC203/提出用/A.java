@@ -2,23 +2,23 @@ import java.util.Scanner;
 
 public class A {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-        // * 提出用のscan
+        Scanner sc = new Scanner(System.in);
+        // * 提出用のsc
         // * ------------------------------------------------
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int c = scan.nextInt();
-        scan.close();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        sc.close();
 
-        if(a == b) {
+        if (a == b) {
             System.out.println(c);
-        } else if(b == c) {
+        } else if (b == c) {
             System.out.println(a);
-        } else if(a == c) {
+        } else if (a == c) {
             System.out.println(b);
         } else {
             System.out.println(0);
         }
-        
+
     }
 }

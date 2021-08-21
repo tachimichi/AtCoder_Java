@@ -3,19 +3,19 @@ import java.io.*;
 
 public class B {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-        // * 提出用のscan
+        Scanner sc = new Scanner(System.in);
+        // * 提出用のsc
         // * ------------------------------------------------
-        //* 配列もString型で格納する
+        // * 配列もString型で格納する
         String a[] = new String[4];
         for (int i = 0; i < 4; i++) {
-            a[i] = scan.next();
+            a[i] = sc.next();
         }
         Arrays.sort(a);
         // System.out.println(Arrays.toString(a));
 
         for (int i = 0; i < a.length - 1; i++) {
-            if(a[i].equals(a[i+1])) {
+            if (a[i].equals(a[i + 1])) {
                 System.out.println("No");
                 return;
             }

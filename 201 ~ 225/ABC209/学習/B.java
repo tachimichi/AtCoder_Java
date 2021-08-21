@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class B {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-        //* 提出用のscan
-        //* ------------------------------------------------
-        int a = scan.nextInt();
-        int b = scan.nextInt();
+        Scanner sc = new Scanner(System.in);
+        // * 提出用のsc
+        // * ------------------------------------------------
+        int a = sc.nextInt();
+        int b = sc.nextInt();
         int[] num = new int[a];
         for (int i = 0; i < num.length; i++) {
-            num[i] = scan.nextInt();
+            num[i] = sc.nextInt();
             // System.out.println(num[i]);
         }
-        scan.close();
+        sc.close();
         // System.out.println(num);
         for (int i = 0; i < a; i++) {
             if (i % 2 == 1) {

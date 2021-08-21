@@ -4,31 +4,30 @@ import java.io.*;
 public class B {
     public static void main(String[] args) throws Exception {
         File file = new File("../txt/B.txt");
-        Scanner scan = new Scanner(file);
-        // * 学習用scan
+        Scanner sc = new Scanner(file);
+        // * 学習用sc
         // * ---------------------------
-        String a = scan.next();
-        scan.close();
+        String a = sc.next();
+        sc.close();
 
         char arr[] = new char[a.length()];
         for (int i = 0; i < a.length; i++) {
             arr[i] = a.charAt(i);
-            if(arr[i] == "6") {
+            if (arr[i] == "6") {
                 arr[i] = "9";
                 continue;
             }
-            if(arr[i] == "9") {
+            if (arr[i] == "9") {
                 arr[i] = "6";
                 continue;
             }
         }
         System.out.println(Arrays.toString(arr));
         /*
-        List<Account> a = [SELECT Id, Name, (SELECT Id, FirstName FROM Contacts) FROM Account];
-        Account count = [SELECT count() FROM Acccount];
-        System.debug(count);
-        System.debug(Limits.getQueryRows());
-        System.debug(Limits.getQueries());
-        */
+         * List<Account> a = [SELECT Id, Name, (SELECT Id, FirstName FROM Contacts) FROM
+         * Account]; Account count = [SELECT count() FROM Acccount];
+         * System.debug(count); System.debug(Limits.getQueryRows());
+         * System.debug(Limits.getQueries());
+         */
     }
 }

@@ -4,18 +4,18 @@ import java.io.*;
 public class B {
     public static void main(String[] args) throws Exception {
         File file = new File("../txt/B.txt");
-        Scanner scan = new Scanner(file);
-        // * 学習用scan
+        Scanner sc = new Scanner(file);
+        // * 学習用sc
         // * ---------------------------
-        int n = scan.nextInt();
+        int n = sc.nextInt();
         int[] a = new int[n];
         for (int i = 0; i < a.length; i++) {
-            a[i] = scan.nextInt();
+            a[i] = sc.nextInt();
         }
-        scan.close();
+        sc.close();
         int ans = 0;
         for (int i = 0; i < a.length; i++) {
-            if(a[i] > 10) {
+            if (a[i] > 10) {
                 int x = a[i] - 10;
                 ans += x;
             }

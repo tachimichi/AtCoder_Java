@@ -5,18 +5,18 @@ import java.io.*;
 
 public class B {
     public static void main(String[] args) throws Exception {
-		File file = new File("../txt/B.txt");
-		Scanner scan = new Scanner(file);
-        //* 学習用scan
-        //* ---------------------------
-        int a = scan.nextInt();
-        int b = scan.nextInt();
+        File file = new File("../txt/B.txt");
+        Scanner sc = new Scanner(file);
+        // * 学習用sc
+        // * ---------------------------
+        int a = sc.nextInt();
+        int b = sc.nextInt();
         int[] num = new int[a];
         for (int i = 0; i < num.length; i++) {
-            num[i] = scan.nextInt();
+            num[i] = sc.nextInt();
             // System.out.println(num[i]);
         }
-        scan.close();
+        sc.close();
         // System.out.println(num);
         for (int i = 0; i < a; i++) {
             if (i % 2 == 1) {

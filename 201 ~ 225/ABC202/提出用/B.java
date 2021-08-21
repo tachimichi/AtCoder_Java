@@ -3,12 +3,12 @@ import java.io.*;
 
 public class B {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-        // * 提出用のscan
+        Scanner sc = new Scanner(System.in);
+        // * 提出用のsc
         // * ------------------------------------------------
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        scan.close();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        sc.close();
 
         int ans = 0;
         for (int i = 1; i <= a; i++) {

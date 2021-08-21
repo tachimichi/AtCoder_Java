@@ -2,17 +2,17 @@ import java.util.Scanner;
 
 public class A {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-        //* 提出用のscan
-        //* ------------------------------------------------
-        int n = scan.nextInt();
-        int a = scan.nextInt();
-        int x = scan.nextInt();
-        int y = scan.nextInt();
-        scan.close();
+        Scanner sc = new Scanner(System.in);
+        // * 提出用のsc
+        // * ------------------------------------------------
+        int n = sc.nextInt();
+        int a = sc.nextInt();
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        sc.close();
 
         int ans;
-        if(n > a) {
+        if (n > a) {
             ans = a * x + (n - a) * y;
         } else {
             ans = n * x;

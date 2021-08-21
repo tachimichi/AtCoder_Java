@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class A {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-        //* 提出用のscan
-        //* ------------------------------------------------
-        double a = scan.nextInt();
-        double b = scan.nextInt();
-        scan.close();
+        Scanner sc = new Scanner(System.in);
+        // * 提出用のsc
+        // * ------------------------------------------------
+        double a = sc.nextInt();
+        double b = sc.nextInt();
+        sc.close();
 
-        System.out.println((a-b)/3 + b);
+        System.out.println((a - b) / 3 + b);
     }
 }
