@@ -6,18 +6,17 @@ public class B {
         Scanner sc = new Scanner(System.in);
         // * 提出用のsc
         // * ------------------------------------------------
-        int s = sc.nextInt();
-        int t = sc.nextInt();
+        long n = sc.nextLong();
         sc.close();
-        int count = 0;
-        for (int i = 0; i <= s; i++) {
-            for (int j = 0; j <= s - i; j++) {
-                for (int k = 0; k <= s - (i + j); k++) {
-                    if (i * j * k <= t)
-                        count++;
-                }
-            }
+
+        long ans = 0;
+        long a = 2;
+        while (a <= n) {
+            a *= 2;
+            ans++;
+            // System.out.println(a);
+
         }
-        System.out.println(count);
+        System.out.println(ans);
     }
 }
