@@ -7,27 +7,22 @@ public class B {
         Scanner sc = new Scanner(file);
         // * 学習用sc
         // * ---------------------------
-        String a = sc.next();
+        String a[] = sc.next().split("");
+        String ans[] = new String[a.length];
         sc.close();
 
-        char arr[] = new char[a.length()];
         for (int i = 0; i < a.length; i++) {
-            arr[i] = a.charAt(i);
-            if (arr[i] == "6") {
-                arr[i] = "9";
-                continue;
-            }
-            if (arr[i] == "9") {
-                arr[i] = "6";
-                continue;
+            ans[i] = a[a.length - 1 - i];
+        }
+        // System.out.println(Arrays.toString(ans));
+
+        for (int i = 0; i < a.length; i++) {
+            if (ans[i].equals("6")) {
+                ans[i] = "9";
+            } else if (ans[i].equals("9")) {
+                ans[i] = "6";
             }
         }
-        System.out.println(Arrays.toString(arr));
-        /*
-         * List<Account> a = [SELECT Id, Name, (SELECT Id, FirstName FROM Contacts) FROM
-         * Account]; Account count = [SELECT count() FROM Acccount];
-         * System.debug(count); System.debug(Limits.getQueryRows());
-         * System.debug(Limits.getQueries());
-         */
+        System.out.println(Arrays.toString(ans).join("", ans));
     }
 }

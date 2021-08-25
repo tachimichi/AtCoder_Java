@@ -6,17 +6,22 @@ public class B {
         Scanner sc = new Scanner(System.in);
         // * 提出用のsc
         // * ------------------------------------------------
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        String a[] = sc.next().split("");
+        String ans[] = new String[a.length];
         sc.close();
 
-        int ans = 0;
-        for (int i = 1; i <= a; i++) {
-            for (int j = 1; j <= b; j++) {
-                int x = i * 100 + j;
-                ans += x;
+        for (int i = 0; i < a.length; i++) {
+            ans[i] = a[a.length - 1 - i];
+        }
+        // System.out.println(Arrays.toString(ans));
+
+        for (int i = 0; i < ans.length; i++) {
+            if (ans[i].equals("6")) {
+                ans[i] = "9";
+            } else if (ans[i].equals("9")) {
+                ans[i] = "6";
             }
         }
-        System.out.println(ans);
+        System.out.println(Arrays.toString(ans).join("", ans));
     }
 }
